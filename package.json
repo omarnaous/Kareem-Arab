@@ -1,0 +1,31 @@
+{
+  "name": "kareem-arab-pt",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "build:pages": "BASE_PATH=/Kareem-Arab/ VITE_PREVIEW=true vite build && cp dist/index.html dist/404.html && touch dist/.nojekyll",
+    "deploy:pages": "npm run build:pages && gh-pages -d dist --dotfiles -m \"Deploy test site\""
+  },
+  "dependencies": {
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "@fontsource/manrope": "^5.3.0",
+    "lenis": "^1.3.26",
+    "motion": "^14.2.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "gh-pages": "^6.3.0",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  }
+}
